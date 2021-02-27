@@ -35,7 +35,7 @@ dependencies {
 
 #### _OR_
 
-Simply include the `SectionedRecyclerAdapter.kt` file in your project!!!
+Simply include the [`SectionedRecyclerAdapter.kt`](sectionedAdapter/src/main/java/me/harikrishnant/sectionedadapter/SectionedRecyclerAdapter.kt) file in your project!!!
 
 ### Implemetation
 
