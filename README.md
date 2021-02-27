@@ -108,6 +108,7 @@ override fun getHeaderViewType(section: Int): Int {
 }
 
 override fun getChildViewType(section: Int, index: Int): Int {
+    val item = sectionedList[section][index]
     if (...) {
         return ROW_TYPE_1
     }
@@ -129,6 +130,7 @@ override fun onBindHeader(holder: HeaderViewHolder, section: Int) {
 
 ```kotlin
 override fun onBindChild(holder: RecyclerView.ViewHolder, section: Int, index: Int) {
+    val item = sectionedList[section][index]
     ...
 }
 ```
