@@ -4,6 +4,8 @@ Sectioned RecyclerView Adapter is an adapter for situations where you need to im
 
 The adapter is created on top of Android's own RecyclerView Adapter, and it just one simple class. That makes it super light weight. It is also designed in such a way that developers with iOS background will feel right at home!!! Yes, it is heavily inspired by iOS's TableView DataSource implementation. All that while still retaining the easiness and performance of using a normal Android Recycler Adapter.
 
+![](app/TODO_LIST.png)
+
 ### Features
  * Based on Android's RecyclerView Adapter. No compromise in performance
  * Inspired from iOS's TableView DataSource implementation
