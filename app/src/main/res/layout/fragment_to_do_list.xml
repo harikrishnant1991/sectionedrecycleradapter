@@ -15,11 +15,13 @@
         android:background="@color/white"
         tools:context=".fragments.list.ListingFragment">
 
-        <androidx.recyclerview.widget.RecyclerView
+        <me.harikrishnant.sectionedadapter.SectionedRecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:spanCount="2"
             app:setAdapter="@{viewModel.getAdapter()}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical" />
 
     </RelativeLayout>

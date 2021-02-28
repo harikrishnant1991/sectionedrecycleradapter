@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerView.ViewHolder>: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private val sectionMap = HashMap<Int, Int>()
+    internal val headerTypes = HashSet<Int>()
 
     final override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
@@ -47,7 +48,9 @@ abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerV
     final override fun getItemViewType(position: Int): Int {
         if (position == 0) {
             if (sectionMap.keys.isNotEmpty()) {
-                return getHeaderViewType(0)
+                val headerViewType = getHeaderViewType(0)
+                headerTypes.add(headerViewType)
+                return headerViewType
             } else {
                 throw RuntimeException("Sectionlist empty")
             }
@@ -59,7 +62,11 @@ abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerV
             secSum++
             if (position < secSum) {
                 val scopePos = position - prevSecSum
-                return if (scopePos == 0) getHeaderViewType(key)
+                return if (scopePos == 0) {
+                    val headerViewType = getHeaderViewType(key)
+                    headerTypes.add(headerViewType)
+                    headerViewType
+                }
                 else getChildViewType(key, scopePos - 1)
             }
             prevSecSum = secSum

@@ -1,15 +1,22 @@
-# Sectioned RecyclerView Adapter
+# Sectioned RecyclerView
 
-Sectioned RecyclerView Adapter is an adapter for situations where you need to implement recyclerviews divided into different sections with custom headers for each section.
+Sectioned RecyclerView consists of two components:
 
-The adapter is created on top of Android's own RecyclerView Adapter, and it just one simple class. That makes it super light weight. It is also designed in such a way that developers with iOS background will feel right at home!!! Yes, it is heavily inspired by iOS's TableView DataSource implementation. All that while still retaining the easiness and performance of using a normal Android Recycler Adapter.
+ * `SectionedRecyclerView`
+ * `SectionedRecyclerViewAdapter`
+
+`SectionedRecyclerViewAdapter` is an adapter for situations where you need to implement recyclerviews divided into different sections with custom headers for each section.
+
+The `SectionedRecyclerView` included in the library that goes hand to hand with the `SectionedRecyclerViewAdapter`. If you just need a list of items, you can use the `SectionedRecyclerViewAdapter` with the regular `RecyclerView`. However, if you need to implement a grid layout, you will need to use the `SectionedRecyclerView`. Rest assured, `SectionedRecyclerView` is also built on top of the regular `RecyclerView`, with very minal additions. There is no compromise in performance.
+
+The adapter is created on top of Android's own `RecyclerView.Adapter`, and it just one simple class. That makes it super light weight. It is also designed in such a way that developers with iOS background will feel right at home!!! Yes, it is heavily inspired by iOS's TableView DataSource implementation. All that while still retaining the easiness and performance of using a normal Android Recycler Adapter.
 
 ![](app/TODO_LIST.png)
+![](app/TODO_GRID.png)
 
 ### Features
- * Based on Android's RecyclerView Adapter. No compromise in performance
+ * Based on Android's `RecyclerView` and `RecyclerView.Adapter`. No compromise in performance
  * Inspired from iOS's TableView DataSource implementation
- * Android Developers will find the implementation pretty similar to, but easier than ExpandableView Adapter - With the performance advantages of RecyclerView Adapter.
 
 ### Download
 
@@ -29,13 +36,9 @@ And then add the following dependency in your app leve; `build.gradle` file:
 ```groovy
 dependencies {
     ...
-    implementation 'com.github.harikrishnant1991:sectionedrecycleradapter:1.0.2'
+    implementation 'com.github.harikrishnant1991:sectionedrecycleradapter:1.1.0'
 }
 ```
-
-#### _OR_
-
-Simply include the [`SectionedRecyclerAdapter.kt`](sectionedAdapter/src/main/java/me/harikrishnant/sectionedadapter/SectionedRecyclerAdapter.kt) file in your project!!!
 
 ### Implemetation
 
@@ -133,6 +136,21 @@ override fun onBindChild(holder: RecyclerView.ViewHolder, section: Int, index: I
     val item = sectionedList[section][index]
     ...
 }
+```
+
+### For grid layout
+
+In the layout XML containing the RecyclerView, all you need to do is use the included Sectioned RecyclerView instead of the regular RecyclerView and set the `spanCount` and `layoutManager` accordingly in XML itself(of course you can do via code)
+
+```XML
+ <me.harikrishnant.sectionedadapter.SectionedRecyclerView
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:spanCount="2"
+    app:setAdapter="@{viewModel.getAdapter()}"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    android:orientation="vertical" />
 ```
 
 And you are ready to go!!! Enjoy your sectioned recycler view!!!
