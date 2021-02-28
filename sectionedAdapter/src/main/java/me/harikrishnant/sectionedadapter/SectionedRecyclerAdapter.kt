@@ -3,7 +3,7 @@ package me.harikrishnant.sectionedadapter
 import androidx.recyclerview.widget.RecyclerView
 
 abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerView.ViewHolder>: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val sectionMap = HashMap<Int, Int>()
+    private val sectionMap = LinkedHashMap<Int, Int>()
     internal val headerTypes = HashSet<Int>()
 
     final override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -18,8 +18,10 @@ abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerV
         }
         var secSum = 0
         var prevSecSum = 0
-        for (key in sectionMap.keys) {
-            secSum += sectionMap[key]!!
+        val iterator = sectionMap.iterator()
+        iterator.forEach {
+            val key = it.key
+            secSum += it.value
             secSum++
             if (position < secSum) {
                 val scopePos = position - prevSecSum
@@ -37,6 +39,7 @@ abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerV
     final override fun getItemCount(): Int {
         val sectionCount = getSectionCount()
         var totalCount = sectionCount
+        sectionMap.clear()
         for (i in 0 until sectionCount) {
             val childCount = getChildCount(i)
             sectionMap[i] = childCount
@@ -57,8 +60,10 @@ abstract class SectionedRecyclerAdapter<H: RecyclerView.ViewHolder, C: RecyclerV
         }
         var secSum = 0
         var prevSecSum = 0
-        for (key in sectionMap.keys) {
-            secSum += sectionMap[key]!!
+        val iterator = sectionMap.iterator()
+        iterator.forEach {
+            val key = it.key
+            secSum += it.value
             secSum++
             if (position < secSum) {
                 val scopePos = position - prevSecSum
