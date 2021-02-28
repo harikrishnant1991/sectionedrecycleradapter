@@ -36,7 +36,7 @@ And then add the following dependency in your app leve; `build.gradle` file:
 ```groovy
 dependencies {
     ...
-    implementation 'com.github.harikrishnant1991:sectionedrecycleradapter:1.1.0'
+    implementation 'com.github.harikrishnant1991:sectionedrecycleradapter:1.1.1'
 }
 ```
 
