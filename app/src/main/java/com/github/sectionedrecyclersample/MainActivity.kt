@@ -1,4 +1,4 @@
-package me.harikrishnant.sectionedrecyclersample
+package com.github.sectionedrecyclersample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

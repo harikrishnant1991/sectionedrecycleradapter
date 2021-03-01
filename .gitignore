@@ -25,6 +25,7 @@ local.properties
 
 # Java class files
 *.class
+*.gpg
 
 # Generated files
 bin/

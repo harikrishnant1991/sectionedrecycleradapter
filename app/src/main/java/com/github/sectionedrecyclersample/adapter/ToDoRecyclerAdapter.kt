@@ -1,16 +1,16 @@
-package me.harikrishnant.sectionedrecyclersample.adapter
+package com.github.sectionedrecyclersample.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import me.harikrishnant.sectionedadapter.SectionedRecyclerAdapter
-import me.harikrishnant.sectionedrecyclersample.R
-import me.harikrishnant.sectionedrecyclersample.databinding.HeaderTodoTypeBinding
-import me.harikrishnant.sectionedrecyclersample.databinding.ItemActiveTodoBinding
-import me.harikrishnant.sectionedrecyclersample.databinding.ItemCompletedTodoBinding
-import me.harikrishnant.sectionedrecyclersample.model.ModelManager
-import me.harikrishnant.sectionedrecyclersample.model.ToDoItem
+import com.github.harikrishnant1991.sectionedrv.SectionedRecyclerAdapter
+import com.github.sectionedrecyclersample.R
+import com.github.sectionedrecyclersample.databinding.HeaderTodoTypeBinding
+import com.github.sectionedrecyclersample.databinding.ItemActiveTodoBinding
+import com.github.sectionedrecyclersample.databinding.ItemCompletedTodoBinding
+import com.github.sectionedrecyclersample.model.ModelManager
+import com.github.sectionedrecyclersample.model.ToDoItem
 import java.lang.RuntimeException
 
 class ToDoRecyclerAdapter: SectionedRecyclerAdapter<ToDoRecyclerAdapter.HeaderViewHolder, RecyclerView.ViewHolder>() {

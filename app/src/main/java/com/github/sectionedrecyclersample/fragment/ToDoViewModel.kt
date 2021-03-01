@@ -1,9 +1,9 @@
-package me.harikrishnant.sectionedrecyclersample.fragment
+package com.github.sectionedrecyclersample.fragment
 
 import androidx.lifecycle.ViewModel
-import me.harikrishnant.sectionedrecyclersample.adapter.ToDoRecyclerAdapter
-import me.harikrishnant.sectionedrecyclersample.model.ModelManager
-import me.harikrishnant.sectionedrecyclersample.model.ToDoItem
+import com.github.sectionedrecyclersample.adapter.ToDoRecyclerAdapter
+import com.github.sectionedrecyclersample.model.ModelManager
+import com.github.sectionedrecyclersample.model.ToDoItem
 
 class ToDoViewModel: ViewModel() {
     private val todoAdapter = ToDoRecyclerAdapter()

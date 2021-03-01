@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="me.harikrishnant.sectionedrecyclersample.fragment.ToDoViewModel" />
+            type="com.github.sectionedrecyclersample.fragment.ToDoViewModel" />
     </data>
 
     <RelativeLayout
@@ -15,7 +15,7 @@
         android:background="@color/white"
         tools:context=".fragments.list.ListingFragment">
 
-        <me.harikrishnant.sectionedadapter.SectionedRecyclerView
+        <com.github.harikrishnant1991.sectionedrv.SectionedRecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

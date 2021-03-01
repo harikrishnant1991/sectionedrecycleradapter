@@ -20,25 +20,16 @@ The adapter is created on top of Android's own `RecyclerView.Adapter`, and it ju
 
 ### Download
 
-Add Jitpack repository in your project level `build.gradle` file:
-
-```groovy
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io'}
-    }
-}
-```
-
-And then add the following dependency in your app leve; `build.gradle` file:
+The library is available in [maven central](https://search.maven.org/artifact/com.github.harikrishnant1991/sectioned-recyclerview/1.0.0/aar). You can add the following dependency in your app level `build.gradle` file to use it:
 
 ```groovy
 dependencies {
     ...
-    implementation 'com.github.harikrishnant1991:sectionedrecycleradapter:1.1.1'
+    implementation 'com.github.harikrishnant1991:sectioned-recyclerview:1.0.0'
 }
 ```
+
+Alternatively directly fetch the [AAR file](https://repo1.maven.org/maven2/com/github/harikrishnant1991/sectioned-recyclerview/1.0.0/sectioned-recyclerview-1.0.0.aar) and include in your project.
 
 ### Implemetation
 

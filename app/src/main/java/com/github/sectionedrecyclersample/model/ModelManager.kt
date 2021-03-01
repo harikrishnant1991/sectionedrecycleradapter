@@ -1,4 +1,4 @@
-package me.harikrishnant.sectionedrecyclersample.model
+package com.github.sectionedrecyclersample.model
 
 object ModelManager {
     val ACTIVE_KEY = "ACTIVE";

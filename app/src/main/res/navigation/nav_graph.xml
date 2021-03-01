@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/toDoListFragment"
-        android:name="me.harikrishnant.sectionedrecyclersample.fragment.ToDoListFragment"
+        android:name="com.github.sectionedrecyclersample.fragment.ToDoListFragment"
         android:label="ToDoListFragment" />
 </navigation>

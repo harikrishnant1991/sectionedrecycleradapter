@@ -1,4 +1,4 @@
-package me.harikrishnant.sectionedrecyclersample.model
+package com.github.sectionedrecyclersample.model
 
 data class ToDoItem(var title: String = "",
                     var description: String = "")

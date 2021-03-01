@@ -1,4 +1,4 @@
-package me.harikrishnant.sectionedadapter
+package com.github.harikrishnant1991.sectionedrv
 
 import android.content.Context
 import android.util.AttributeSet

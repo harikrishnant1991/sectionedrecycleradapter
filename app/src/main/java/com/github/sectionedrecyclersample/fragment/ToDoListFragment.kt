@@ -1,4 +1,4 @@
-package me.harikrishnant.sectionedrecyclersample.fragment
+package com.github.sectionedrecyclersample.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import me.harikrishnant.sectionedrecyclersample.databinding.FragmentToDoListBinding
+import com.github.sectionedrecyclersample.databinding.FragmentToDoListBinding
 
 /**
  * A simple [Fragment] subclass.
