@@ -134,7 +134,7 @@ override fun onBindChild(holder: RecyclerView.ViewHolder, section: Int, index: I
 In the layout XML containing the RecyclerView, all you need to do is use the included Sectioned RecyclerView instead of the regular RecyclerView and set the `spanCount` and `layoutManager` accordingly in XML itself(of course you can do via code)
 
 ```XML
- <me.harikrishnant.sectionedadapter.SectionedRecyclerView
+ <com.github.harikrishnant1991.sectionedrv.SectionedRecyclerView
     android:id="@+id/recycler_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
